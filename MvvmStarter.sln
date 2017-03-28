@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvvmStarter", "MvvmStarter\MvvmStarter.csproj", "{89EB41DF-3D48-42C4-86B8-4C99FE7C0266}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89EB41DF-3D48-42C4-86B8-4C99FE7C0266}.Debug|ARM.ActiveCfg = Debug|ARM
+		{89EB41DF-3D48-42C4-86B8-4C99FE7C0266}.Debug|ARM.Build.0 = Debug|ARM
+		{89EB41DF-3D48-42C4-86B8-4C99FE7C0266}.Debug|ARM.Deploy.0 = Debug|ARM
+		{89EB41DF-3D48-42C4-86B8-4C99FE7C0266}.Debug|x64.ActiveCfg = Debug|x64
+		{89EB41DF-3D48-42C4-86B8-4C99FE7C0266}.Debug|x64.Build.0 = Debug|x64
+		{89EB41DF-3D48-42C4-86B8-4C99FE7C0266}.Debug|x64.Deploy.0 = Debug|x64
+		{89EB41DF-3D48-42C4-86B8-4C99FE7C0266}.Debug|x86.ActiveCfg = Debug|x86
+		{89EB41DF-3D48-42C4-86B8-4C99FE7C0266}.Debug|x86.Build.0 = Debug|x86
+		{89EB41DF-3D48-42C4-86B8-4C99FE7C0266}.Debug|x86.Deploy.0 = Debug|x86
+		{89EB41DF-3D48-42C4-86B8-4C99FE7C0266}.Release|ARM.ActiveCfg = Release|ARM
+		{89EB41DF-3D48-42C4-86B8-4C99FE7C0266}.Release|ARM.Build.0 = Release|ARM
+		{89EB41DF-3D48-42C4-86B8-4C99FE7C0266}.Release|ARM.Deploy.0 = Release|ARM
+		{89EB41DF-3D48-42C4-86B8-4C99FE7C0266}.Release|x64.ActiveCfg = Release|x64
+		{89EB41DF-3D48-42C4-86B8-4C99FE7C0266}.Release|x64.Build.0 = Release|x64
+		{89EB41DF-3D48-42C4-86B8-4C99FE7C0266}.Release|x64.Deploy.0 = Release|x64
+		{89EB41DF-3D48-42C4-86B8-4C99FE7C0266}.Release|x86.ActiveCfg = Release|x86
+		{89EB41DF-3D48-42C4-86B8-4C99FE7C0266}.Release|x86.Build.0 = Release|x86
+		{89EB41DF-3D48-42C4-86B8-4C99FE7C0266}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
