@@ -8,13 +8,13 @@
     mc:Ignorable="d" DataContext="{Binding Source={StaticResource Locator},Path=CatIndex}">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <GridView ItemsSource="{Binding Cats}" HorizontalAlignment="Center" IsItemClickEnabled="True" ItemClick="ListViewBase_OnItemClick">
+        <GridView ItemsSource="{Binding}" HorizontalAlignment="Center" IsItemClickEnabled="True" ItemClick="ListViewBase_OnItemClick">
             <GridView.ItemTemplate>
                 <DataTemplate>
-                    <Image Source="{Binding ImgUrl}" Width="200" Height="200" Stretch="UniformToFill"/>
+                    <Image Source="{Binding}" Width="200" Height="200" Stretch="UniformToFill"/>
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
-        <ProgressRing HorizontalAlignment="Center" VerticalAlignment="Center" IsActive="True" Width="75" Height="75" Visibility="{Binding Loading}"/>
+        <ProgressRing HorizontalAlignment="Center" VerticalAlignment="Center" IsActive="True" Width="75" Height="75" Visibility="{Binding}"/>
     </Grid>
 </Page>

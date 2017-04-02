@@ -14,10 +14,9 @@ namespace CatApp.ViewModels
         private readonly ICatDataProvider _catDataProvider;
         private readonly INavigationManger _navigationManger;
 
-        public CatIndexViewModel(ICatDataProvider catDataProvider,INavigationManger navigationManger)
+        public CatIndexViewModel()
         {
-            _catDataProvider = catDataProvider;
-            _navigationManger = navigationManger;
+
         }
 
         private bool _loading;
@@ -25,38 +24,14 @@ namespace CatApp.ViewModels
 
         public async void NavigatedTo()
         {
-            if (Cats == null)
-            {
-                Loading = true;
-                Cats = new ObservableCollection<CatDataModel>(await _catDataProvider.GetCatData());
-                Loading = false;
-            }
+
         }
 
-        public bool Loading
-        {
-            get { return _loading; }
-            set
-            {
-                _loading = value;
-                RaisePropertyChanged();
-            }
-        }
 
-        public ObservableCollection<CatDataModel> Cats
-        {
-            get { return _cats; }
-            set
-            {
-                _cats = value;
-                RaisePropertyChanged();
-            }
-        }
 
-        public ICommand NavigateDetailsCommand
-            =>
-                new RelayCommand<CatDataModel>(
-                    model =>
-                        _navigationManger.Navigate(PageIndex.DetailsPage, new CatDetailsPageNavArgs {Model = model}));
+
+
+        public ICommand NavigateDetailsCommand { get; }
+            
     }
 }
