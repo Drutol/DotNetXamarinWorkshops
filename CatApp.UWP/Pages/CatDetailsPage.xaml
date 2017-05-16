@@ -5,7 +5,7 @@
     xmlns:local="using:CatApp.UWP.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" DataContext="{Binding}">
+    mc:Ignorable="d" DataContext="{Binding Source={StaticResource Locator},Path=CatDetails}">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -13,10 +13,10 @@
                 <RowDefinition Height="*"/>
                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Image Source="{Binding}"/>
+            <Image Source="{Binding CurrentCat.ImgUrl}"/>
             <StackPanel Grid.Row="1">
-                <Button Content="Show fact" Command="{Binding}" HorizontalAlignment="Center" Width="200" Height="50"/>
-                <Button Content="Go back" Command="{Binding}" Style="{StaticResource TextBlockButtonStyle}" HorizontalAlignment="Center"/>
+                <Button Content="Show fact" Command="{Binding ShowFactCommand}" HorizontalAlignment="Center" Width="200" Height="50"/>
+                <Button Content="Go back" Command="{Binding GoBackCommand}" Style="{StaticResource TextBlockButtonStyle}" HorizontalAlignment="Center"/>
             </StackPanel>
         </Grid>
     </Grid>

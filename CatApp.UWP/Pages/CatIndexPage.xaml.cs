@@ -36,7 +36,7 @@ namespace CatApp.UWP.Pages
 
         private void ListViewBase_OnItemClick(object sender, ItemClickEventArgs e)
         {
-
+            ViewModelLocator.CatIndex.NavigateDetailsCommand.Execute(e.ClickedItem);
         }
     }
 }

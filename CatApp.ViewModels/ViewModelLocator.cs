@@ -11,7 +11,10 @@ namespace CatApp.ViewModels
         {
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
 
+            SimpleIoc.Default.Register<CatDetailsViewModel>();
+            SimpleIoc.Default.Register<CatIndexViewModel>();
 
+            SimpleIoc.Default.Register<ICatDataProvider,CatDataProvider>();
         }
 
         public static CatIndexViewModel CatIndex => SimpleIoc.Default.GetInstance<CatIndexViewModel>();

@@ -11,21 +11,31 @@ namespace CatApp.ViewModels
         private readonly INavigationManger _navigationManger;
         private readonly IMessageBoxAdapter _messageBoxAdapter;
 
-        public CatDetailsViewModel()
+        public CatDetailsViewModel(INavigationManger navigationManger,IMessageBoxAdapter messageBoxAdapter)
         {
+            _navigationManger = navigationManger;
+            _messageBoxAdapter = messageBoxAdapter;
         }
 
         private CatDataModel _currentCat;
 
-
+        public CatDataModel CurrentCat
+        {
+            get { return _currentCat; }
+            set
+            {
+                _currentCat = value;
+                RaisePropertyChanged();
+            }
+        }
 
         public void NavigatedTo(CatDetailsPageNavArgs args)
         {
-
+            CurrentCat = args.Model;
         }
 
-        public ICommand GoBackCommand   {get;}
+        public ICommand GoBackCommand => new RelayCommand(() => _navigationManger.GoBack());
 
-        public ICommand ShowFactCommand { get; }
+        public ICommand ShowFactCommand => new RelayCommand(() => _messageBoxAdapter.ShowMessageDialog("Fact",CurrentCat.Fact));
     }
 }
